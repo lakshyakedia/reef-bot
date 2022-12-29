@@ -1,0 +1,9 @@
+,
+  {
+     
+    "name": "karta dharta",
+    "host": "node1.kartadharta.xyz",
+    "port": 443,
+    "password": "kdlavalink",
+    "secure": true
+  }

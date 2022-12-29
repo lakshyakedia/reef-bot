@@ -1,0 +1,67 @@
+{
+  "name": "muzox-clone",
+  "version": "1.0.0",
+  "description": "a clone version of muzox in poru",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARYANOP-Radio/Muzox-clone.git"
+  },
+  "keywords": [
+    "Music",
+    "bestbot"
+  ],
+  "author": "ARYANOP-Radio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ARYANOP-Radio/Muzox-clone/issues"
+  },
+  "homepage": "https://github.com/ARYANOP-Radio/Muzox-clone#readme",
+  "dependencies": {
+    "@top-gg/sdk": "^3.1.3",
+    "ascii-table": "0.0.9",
+    "body-parser": "^1.19.0",
+    "canvafy": "^2.0.2",
+    "canvas": "^2.10.2",
+    "chalk": "^4.1.2",
+    "chartjs-node-canvas": "^4.1.6",
+    "chartjs-plugin-gradient": "^0.5.0",
+    "chunk": "0.0.3",
+    "colors": "^1.4.0",
+    "common-tags": "^1.8.2",
+    "currency-system": "^2.8.6",
+    "delay": "^5.0.0",
+    "discord-api-types": "^0.35.0",
+    "discord-giveaways": "^6.0.1",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.6",
+    "enmap": "^5.8.7",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "http": "0.0.1-security",
+    "memorystore": "^1.6.6",
+    "moment": "^2.29.3",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^6.4.2",
+    "ms": "^2.1.3",
+    "node": "^16.6.1",
+    "node-cron": "^3.0.2",
+    "node-os-utils": "^1.3.7",
+    "node-superfetch": "^0.2.3",
+    "os-utils": "0.0.14",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "path": "^0.12.7",
+    "poru": "^3.7.3",
+    "pretty-ms": "^7.0.1",
+    "qrcode": "^1.5.1",
+    "quickmongo": "^5.2.0",
+    "spcanvas": "^1.0.0",
+    "topgg-autoposter": "^2.0.1",
+    "url": "^0.11.0"
+  }
+}
