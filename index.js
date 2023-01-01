@@ -14,16 +14,14 @@ require("dotenv").config()
 
 const client = new Client({
   restWsBridgetimeout: 100,
+  failIfNotExists: true,
+  makeCache: discord.Options.cacheEverything(),
+  
   allowedMentions: {
     parse: ["roles", "users", "everyone"],
     repliedUser: true,
   },
 
-  failIfNotExists: true,
-  allowedMentions: {
-    parse: ['roles', 'users', 'everyone'],
-    repliedUser: false,
-  },
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildVoiceStates,
