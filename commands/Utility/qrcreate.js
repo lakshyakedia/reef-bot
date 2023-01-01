@@ -19,14 +19,14 @@ userPerms: ['ViewChannel'],
         {
             const embed = new EmbedBuilder()
             .setDescription(`${client.emoji.wrong} Please Enter Some Text`)
-            .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
+            .setColor(client.config.embedColor)
             return message.reply({embeds:[embed]})
         }
         let image = await QRCode.toBuffer(text);
         const attachment = new AttachmentBuilder(image, 'qrcode.png')
         const embed = new EmbedBuilder()
         .setAuthor({name:'Qr Code Generation',iconURL: client.user.displayAvatarURL()})
-        .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
+        .setColor(client.config.embedColor)
         .setImage(`attachment://qrcode.png`)
         message.reply({
             embeds: [embed],

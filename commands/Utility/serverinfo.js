@@ -38,28 +38,32 @@ module.exports = {
         .map(role => role.toString())
         .slice(0, -1)
       let rolesdisplay;
+      let roless;
       if (roles.length < 15) {
         rolesdisplay = roles.join(' ')
         if (roles.length < 1) rolesdisplay = "None"
       } else {
-        rolesdisplay = `\`Too many roles to show..\``
+        
+        rolesdisplay = `\`Too many roles to show.\``
       }
       if(rolesdisplay.length > 1024)
         rolesdisplay = `${roles.slice(4).join(" ")} \`more..\``
+        await message.guild.members.fetch();
       const members = guild.members.cache
       const channels = guild.channels.cache
       const emojis = guild.emojis.cache
-      let data = guild.bannerURL
+      let data = guild.bannerURL()
       if(data){
+        
         return message.reply({embeds: [new EmbedBuilder()
-            .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
+            .setColor(client.config.embedColor)
           .setTitle(`${guild.name}'s Information`)
           .setThumbnail(guild.iconURL({ dynamic: true }))
           .setImage(guild.bannerURL({size: 4096}))
           .addFields([
             {
               name: '__About__',
-              value: `**Name**: ${guild.name} \n **ID**: ${guild.id} \n **Owner <a:owner:1026914530384678952>:** <@!${guild.ownerId}> (${guild.ownerId})\n**Created at:** <t:${parseInt(createdTimestamp / 1000)}:R>\n**Members: **${guild.memberCount}`
+              value: `**Name**: ${guild.name} \n **ID**: ${guild.id} \n **Owner ${client.emoji.own}:** <@!${guild.ownerId}> (${guild.ownerId})\n**Created at:** <t:${parseInt(createdTimestamp / 1000)}:R>\n**Members: **${guild.memberCount}`
             },
             {
               name: '__Server Information__',
@@ -67,19 +71,23 @@ module.exports = {
             },
             {
               name: '__Channels__',
-              value: `**Total: ** ${channels.size}\n**Channels: **<:text:1026914270006493267> ${channels.filter(channel => channel.type === 'GUILD_TEXT').size} | <:stagech:1026914113537966121> ${channels.filter(channel => channel.type === 'GUILD_VOICE').size}`
+              value: `**Total: ** ${channels.size}\n**Channels: **${client.emoji.textch} ${channels.filter(channel => channel.type === 0).size} | ${client.emoji.stagech} ${channels.filter(channel => channel.type === 2).size} | ${client.emoji.forumch} ${channels.filter(channel => channel.type === 15).size}`
+            },
+            {
+              name: '__Members__',
+              value: `**Total: ** ${guild.memberCount}\n**Humans: **${client.emoji.human} ${members.filter(member => !member.user.bot).size} | ${client.emoji.bot}  ${members.filter(member => member.user.bot).size} `
             },
             {
               name: '__Emoji Info__',
-              value: `**Regurlar:** ${emojis.filter(emoji => !emoji.animated).size} \n**Animated:** ${emojis.filter(emoji => emoji.animated).size} \n**Total:** ${emojis.size}`
+              value: `**Regular:** ${emojis.filter(emoji => !emoji.animated).size} \n**Animated:** ${emojis.filter(emoji => emoji.animated).size} \n**Total:** ${emojis.size}`
             },
             {
               name: '__Boost Status__',
-              value: `${booster[guild.premiumTier]} [<a:booster:1026914388554289183> ${guild.premiumSubscriptionCount || '0'} Boosts]`
+              value: `${booster[guild.premiumTier]} [${client.emoji.booster} ${guild.premiumSubscriptionCount || '0'} Boosts]`
             },
             {
               name: `__Server Roles__ [${roles.length}]`,
-              value: `${rolesdisplay}`
+              value: `Highest Role: <@&${message.guild.roles.highest.id}>\n${rolesdisplay}`
             }
           ])
           .setTimestamp()
