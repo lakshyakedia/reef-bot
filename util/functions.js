@@ -18,7 +18,7 @@ module.exports = {
   .replaceAll(/<user.tag>/g, member.tag) 
   .replaceAll(/<guild.mc>/g, guild.memberCount+1)
   .replaceAll(/<guild.name>/g, guild.name)
-    }
+    },
     shorten: function(text, maxLen = 2000) {
 
     return text.length > maxLen ? `${text.substr(0, maxLen - 3)}...` : text;

@@ -26,7 +26,7 @@ module.exports = {
     
     let e;
     if(em === 'Laptop')
-    e= <:laptop:1055862662380142684>;
+    e= "<:laptop:1055862662380142684>";
     if(em === 'Rolex')
     e= "<:rolex:1056942672385953933>";
     if(em === 'Bank Note')
