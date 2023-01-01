@@ -26,7 +26,7 @@ module.exports = {
         return message.reply({embeds: [new EmbedBuilder()
           .setColor(client.config.embedColor)
         .setTitle(`${guild.name}'s Avatar`)
-        .setDescription(`${client.emoji.wrong} No Avatar For This Guild`)        
+        .setDescription(`<:11:1052589045374533653> No Avatar For This Guild`)        
         .setTimestamp()
       ]})
       }

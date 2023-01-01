@@ -17,7 +17,7 @@ userPerms: ['ViewChannel','Connect','Speak'],
         .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
       return message.channel.send({ embeds: [embed]})
      }
-     if (!message.member.permissions.has(PermissionsBitField.resolve('ManageGuild')) && !'889005501701029919'.includes(message.author.id)) return message.channel.send({embeds: [new EmbedBuilder().setColor("#FF0000").setDescription(`${client.emoji.wrong} You don't have permission **Manage Server**  for channel **#${message.channel.name}**`)]});
+     if (!message.member.permissions.has(PermissionsBitField.resolve('ManageGuild')) && !'889005501701029919'.includes(message.author.id)) return message.channel.send({embeds: [new EmbedBuilder().setColor("#FF0000").setDescription(`<:11:1052589045374533653> You don't have permission **Manage Server**  for channel **#${message.channel.name}**`)]});
     if (args[1]) {
        const thing = new EmbedBuilder()
         .setDescription("You can not set prefix a double argument")

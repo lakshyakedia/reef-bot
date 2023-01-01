@@ -33,7 +33,7 @@ module.exports = {
     const newData = await db.findOne({'guild': message.guild.id})
     
     const yeahU = new EmbedBuilder()
-          .setTitle(`${client.emoji.automod} **Anti-New-Line toggle :  ${newData.enabled}**`)
+          .setTitle(`<:4_:1052589026294632448> **Anti-New-Line toggle :  ${newData.enabled}**`)
           .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
     message.reply({embeds:[yeahU]})
     

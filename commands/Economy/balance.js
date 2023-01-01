@@ -22,9 +22,9 @@ module.exports = {
         .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
         .setTitle(`${user.tag}'s Bank Information`)
         .setDescription(`
-        ${client.emoji.wallet} Wallet: ${result.wallet}
-        ${client.emoji.bank} Bank: ${result.bank}
-        ${client.emoji.bank} Bank Space: ${(result.rawData.bankSpace.toLocaleString())}
+        <a:wallet:1055761007789748275> Wallet: ${result.wallet}
+        <:ecobank:1055873821590175784> Bank: ${result.bank}
+        <:ecobank:1055873821590175784> Bank Space: ${(result.rawData.bankSpace.toLocaleString())}
          `)
         return message.reply({embeds: [ems]});
 

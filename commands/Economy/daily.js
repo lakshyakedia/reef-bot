@@ -27,7 +27,7 @@ module.exports = {
 
         .setDescription(`
 
-        ${client.emoji.wrong} You\'ve Claimed Your Daily Money recently.
+        <:11:1052589045374533653> You\'ve Claimed Your Daily Money recently.
 
         Try Again in ${result.time}`)
 
@@ -39,7 +39,7 @@ module.exports = {
 
         .setDescription(`
 
-        You Earned ${client.emoji.coin}${result.amount}.
+        You Earned <a:bitcoin:1055862360713220237>${result.amount}.
 
         You\'re now on ${result.rawData.streak.daily} days daily streak. `)
 

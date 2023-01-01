@@ -73,7 +73,7 @@ if(interaction.isButton()) {
           .setColor(interaction.guild.members.me.displayHexColor !== '#000000' ? interaction.guild.members.me.displayHexColor : client.config.embedColor)
           if (funny === 'antinuke') {
             _commands = client.commands.filter((x) => x.category && x.category === "antinuke").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.antinuke} **Antinuke \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:45:1052589154208325793> **Antinuke \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -82,7 +82,7 @@ if(interaction.isButton()) {
           }
           if (funny === 'automod') {
             _commands = client.commands.filter((x) => x.category && x.category === "automod").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.automod} **Automod \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:4_:1052589026294632448> **Automod \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -91,7 +91,7 @@ if(interaction.isButton()) {
           }
           if (funny === 'mod') {
             _commands = client.commands.filter((x) => x.category && x.category === "mod").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.mod} **Moderation \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:40:1052589138819436624> **Moderation \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -100,7 +100,7 @@ if(interaction.isButton()) {
           }
           if (funny === 'utility') {
             _commands = client.commands.filter((x) => x.category && x.category === "utility").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.utility} **Utility \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:3_:1052589023794823249> **Utility \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -109,7 +109,7 @@ if(interaction.isButton()) {
           }
         if (funny === 'settings') {
             _commands = client.commands.filter((x) => x.category && x.category === "settings").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.settings} **Settings \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:10:1052589041717092412> **Settings \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -118,7 +118,7 @@ if(interaction.isButton()) {
           }
           if (funny === 'info') {
             _commands = client.commands.filter((x) => x.category && x.category === "info").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.info} **Information \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:27:1052589100458315776> **Information \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -127,7 +127,7 @@ if(interaction.isButton()) {
           }
           if (funny === 'welcome') {
             _commands = client.commands.filter((x) => x.category && x.category === "welcome").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.welcome} **Welcome \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <a:welcome:1054639371657162812> **Welcome \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -136,7 +136,7 @@ if(interaction.isButton()) {
           }
          if (funny === 'vmod') {
             _commands = client.commands.filter((x) => x.category && x.category === "vmod").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.voice} **Voice Moderation \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:50:1056096392860422236> **Voice Moderation \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -145,7 +145,7 @@ if(interaction.isButton()) {
           }
         if (funny === 'customroles') {
             _commands = client.commands.filter((x) => x.category && x.category === "customroles").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.customrole} **Custom Roles \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <:52:1056096390079598673> **Custom Roles \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -154,7 +154,7 @@ if(interaction.isButton()) {
           }
         if (funny === 'economy') {
             _commands = client.commands.filter((x) => x.category && x.category === "economy").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` ${client.emoji.coin} **Economy \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
+            embed.addFields({name: ` <a:bitcoin:1055862360713220237> **Economy \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
             interaction.update({
               embeds: [embed],
               ephemeral: true
@@ -164,20 +164,20 @@ if(interaction.isButton()) {
           if (funny === 'home') {
             const ehome = new EmbedBuilder()
             .setAuthor({name:`${client.user.username}'s Panel`, iconURL: client.user.displayAvatarURL()})
-            .setDescription(`${client.emoji.home} **General Help**
+            .setDescription(`<:46:1052589156787814481> **General Help**
              My prefix here is: ${prefix}
              Use select menu for commands.
              For further help [click here](${client.config.links.dc}).      
-             ${client.emoji.modules} **Modules**
-             ${client.emoji.dot} Antinuke
-             ${client.emoji.dot} Moderation
-             ${client.emoji.dot} Automod
-             ${client.emoji.dot} Utility
-             ${client.emoji.dot} Welcomer
-             ${client.emoji.dot} Settings
-             ${client.emoji.dot} Information
+             <:module:1054660233710022728> **Modules**
+             <a:dot:1052593815900409956> Antinuke
+             <a:dot:1052593815900409956> Moderation
+             <a:dot:1052593815900409956> Automod
+             <a:dot:1052593815900409956> Utility
+             <a:dot:1052593815900409956> Welcomer
+             <a:dot:1052593815900409956> Settings
+             <a:dot:1052593815900409956> Information
     
-             ${client.emoji.link} **Quick Links**
+             <:27:1052589100458315776> **Quick Links**
              [Get ${client.user.username}](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=applications.commands%20bot)| [Support HQ](${client.config.links.dc})
             `)
             
@@ -209,7 +209,7 @@ if (!command) return
         ephemeral: true,
         embeds: [
             new EmbedBuilder()
-            .setDescription(`${client.emoji.wrong} Please wait \`${slash(interaction, command).toFixed(1)}\` Before using the \`${command.name}\` command again!`)
+            .setDescription(`<:11:1052589045374533653> Please wait \`${slash(interaction, command).toFixed(1)}\` Before using the \`${command.name}\` command again!`)
                   
             .setColor(interaction.guild.members.me.displayHexColor !== '#000000' ? interaction.guild.members.me.displayHexColor : client.config.embedColor)
               

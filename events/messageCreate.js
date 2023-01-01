@@ -189,7 +189,7 @@ var m = "";
       return await message.reply({
           embeds: [
               new EmbedBuilder()
-                  .setDescription(`${client.emoji.wrong} Please wait \`${msg(message, command).toFixed(1)}\` Before using the \`${command.name}\` command again!`)
+                  .setDescription(`<:11:1052589045374533653> Please wait \`${msg(message, command).toFixed(1)}\` Before using the \`${command.name}\` command again!`)
                   
                 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
               ]
@@ -212,14 +212,14 @@ var m = "";
     if (command.inVc && !memberChannel) {
       const join = new EmbedBuilder()
       .setColor(`#ff0000`)
-        .setDescription(`${client.emoji.wrong} You must be in a voice channel to use this command!`)
+        .setDescription(`<:11:1052589045374533653> You must be in a voice channel to use this command!`)
       return message.channel.send({embeds: [join]})
     }
   
   if (command.sameVc && player && botChannel !== memberChannel) {
 const same = new EmbedBuilder()
       .setColor(`#ff0000`)
-        .setDescription(`${client.emoji.wrong} You must be in the same voice channel as me to use this command!`) 
+        .setDescription(`<:11:1052589045374533653> You must be in the same voice channel as me to use this command!`) 
     return message.channel.send({embeds: [same]})
 
 
@@ -228,7 +228,7 @@ const same = new EmbedBuilder()
   if (command.player && !player) {
     const exist = new EmbedBuilder()
       .setColor(`#ff0000`)
-        .setDescription(`${client.emoji.wrong} There is nothing playing in this server!`) 
+        .setDescription(`<:11:1052589045374533653> There is nothing playing in this server!`) 
 
 
 return message.channel.send({embeds: [exist]})
@@ -237,7 +237,7 @@ return message.channel.send({embeds: [exist]})
 
 const exist = new EmbedBuilder()
       .setColor(`#ff0000`)
-        .setDescription(`${client.emoji.wrong} There is nothing playing in this server!`) 
+        .setDescription(`<:11:1052589045374533653> There is nothing playing in this server!`) 
 
 
 message.channel.send({embeds: [exist]})
@@ -246,7 +246,7 @@ message.channel.send({embeds: [exist]})
   if (command.args && !args.length) {
     const provide = new EmbedBuilder()
     .setColor(`#ff0000`)
-    .setDescription(`${client.emoji.wrong} You didn't provide any arguments!`)
+    .setDescription(`<:11:1052589045374533653> You didn't provide any arguments!`)
     return message.channel.send({embeds: [provide]})
   }
   //premium starts

@@ -13,11 +13,11 @@ var botperm = message.guild.members.me.permissions.has(PermissionsBitField.Flags
             var uperm = message.member.permissions.has(PermissionsBitField.Flags.ManageChannels) || message.member.permissions.has(PermissionsBitField.Flags.Administrator)
 let upn = new EmbedBuilder()
    
-    .setDescription(`${client.emoji.wrong} You don\'t have permission to use this command.`)
+    .setDescription(`<:11:1052589045374533653> You don\'t have permission to use this command.`)
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 let bpn = new EmbedBuilder()
    
-    .setDescription(`${client.emoji.wrong} I don\'t have permission to run this command.`)
+    .setDescription(`<:11:1052589045374533653> I don\'t have permission to run this command.`)
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 
       if(!uperm)
@@ -32,7 +32,7 @@ return message.reply({embeds:[bpn]});
 const channel = message.mentions.channels.first() || message.channel;
         
 let nocha = new EmbedBuilder()
-.setDescription(`${client.emoji.wrong} That\'s not a text/voice-text channel.`)
+.setDescription(`<:11:1052589045374533653> That\'s not a text/voice-text channel.`)
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 
       if(!channel.isTextBased())
@@ -52,7 +52,7 @@ await channel.permissionOverwrites.edit(message.guild.roles.everyone, {
 
       const unhidden = new EmbedBuilder()
      .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-.setDescription(`${client.emoji.right} <#${channel.id}> has been unhidden.`)
+.setDescription(`<:10:1052589041717092412> <#${channel.id}> has been unhidden.`)
 
      
     message.reply({

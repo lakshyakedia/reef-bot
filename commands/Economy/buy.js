@@ -15,8 +15,8 @@ module.exports = {
       const embed = new EmbedBuilder()
         .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
         let thing = parseInt(args[0]);
-        if(!thing) return message.reply({embeds: [embed.setDescription(`${client.emoji.wrong} Provide a Valid Item Number`)]})
-        if(isNaN(thing)) return message.reply({embeds: [embed.setDescription(`${client.emoji.wrong} Provide a Valid Item Number`)]})
+        if(!thing) return message.reply({embeds: [embed.setDescription(`<:11:1052589045374533653> Provide a Valid Item Number`)]})
+        if(isNaN(thing)) return message.reply({embeds: [embed.setDescription(`<:11:1052589045374533653> Provide a Valid Item Number`)]})
 
   let result = await cs.buy({
     user: message.author,
@@ -29,48 +29,48 @@ module.exports = {
     if (result.error) {
       if (result.type === "No-Item")
       return message.reply({
-        embeds: [embed.setDescription(`${client.emoji.wrong} Please Provide a Valid Item Number.`)],
+        embeds: [embed.setDescription(`<:11:1052589045374533653> Please Provide a Valid Item Number.`)],
       });
       if (result.type === "Invalid-Item")
       return message.reply({
-        embeds: [embed.setDescription(`${client.emoji.wrong} The Item Does not Exists.`)],
+        embeds: [embed.setDescription(`<:11:1052589045374533653> The Item Does not Exists.`)],
       });
       if (result.type === "low-money")
       return message.reply({
-        embeds: [embed.setDescription(`${client.emoji.wrong} Ypu Don\'t Have Enough Money On Your Wallet.`)],
+        embeds: [embed.setDescription(`<:11:1052589045374533653> Ypu Don\'t Have Enough Money On Your Wallet.`)],
       });
       if (result.type === "Invalid-Amount")
       return message.reply({
-        embeds: [embed.setDescription(`${client.emoji.wrong} Can\'t Add less than 1 Item.`)],
+        embeds: [embed.setDescription(`<:11:1052589045374533653> Can\'t Add less than 1 Item.`)],
       });
     } else{
     let em = result.inventory.name;
     
     let e;
     if(em === 'Laptop')
-    e= client.emoji.laptop;
+    e= <:laptop:1055862662380142684>;
     if(em === 'Rolex')
-    e= client.emoji.rolex;
+    e= "<:rolex:1056942672385953933>";
     if(em === 'Bank Note')
-    e= client.emoji.banknote;
+    e= "<:Banknote2:1056943624874639392>";
     if(em === 'Iphone')
-    e= client.emoji.iphone;
+    e= "<:iphone12max:1056942815646580798>";
     if(em === 'Chill Pill')
-    e= client.emoji.chillpill;
+    e= "<:chillpill:1057202298910158879>";
     if(em === 'Garbage')
-    e= client.emoji.garbage;
+    e= "<:garbage:1057202722971070474>";
     if(em === 'Fake Id')
-    e= client.emoji.fakeid;
+    e= "<:fakeid:1057202440811855953>";
     if(em === 'Rifle')
-    e= client.emoji.rifle;
+    e= "<:rifle:1057202795196973079>";
     if(em === 'Junk')
-    e= client.emoji.junk;
+    e= "<:junk:1057202655551832105>";
     if(em === 'Landmine')
-    e= client.emoji.landmine;
+    e= "<:landmine:1057202882887299172>";
    
     return message.reply({
-      embeds: [embed.setDescription(`${client.emoji.right} Successfully Bought ${parseInt(args[1]) || 1}  ${e}${result.inventory.name} 
-      Deducted Amount From Wallet: ${client.emoji.coin}${result.price} `)],
+      embeds: [embed.setDescription(`<:10:1052589041717092412> Successfully Bought ${parseInt(args[1]) || 1}  ${e}${result.inventory.name} 
+      Deducted Amount From Wallet: <a:bitcoin:1055862360713220237>${result.price} `)],
     });
       
       }

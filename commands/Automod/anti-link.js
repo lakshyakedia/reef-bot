@@ -33,7 +33,7 @@ let data = await db.findOne({'guild': message.guild.id})
 const newData = await db.findOne({'guild': message.guild.id})
 console.log(newData)
 const yeahU = new EmbedBuilder()
-      .setTitle(`${client.emoji.automod} **Anti-link toggle :  ${newData.enabled}**`)
+      .setTitle(`<:4_:1052589026294632448> **Anti-link toggle :  ${newData.enabled}**`)
       
       .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 message.reply({embeds:[yeahU]})

@@ -38,7 +38,7 @@ module.exports = {
       
         let bruh1 = new EmbedBuilder()
          
-          .setDescription(`${client.emojis.wrong}  You don\'t have permission to moderate that member.`)
+          .setDescription(`<:11:1052589045374533653>  You don\'t have permission to moderate that member.`)
       .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
             if (message.member.roles.highest.position <= member.roles.highest.position && message.user.id !== message.guild.ownerId)
               return message.reply({embeds:[bruh1]})
@@ -46,7 +46,7 @@ module.exports = {
       
       let bruh11 = new EmbedBuilder()
            
-        .setDescription(`${client.emojis.wrong} I don\'t have permissions to moderate that member.`)
+        .setDescription(`<:11:1052589045374533653> I don\'t have permissions to moderate that member.`)
       .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
         if (!member.bannable) return message.reply({ embeds: [bruh11] });
       
@@ -54,7 +54,7 @@ module.exports = {
       
             let banned = new EmbedBuilder()
            .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-      .setDescription(`${client.emojis.right} \`${member.user.tag}\` has been banned.`)
+      .setDescription(`<:10:1052589041717092412> \`${member.user.tag}\` has been banned.`)
       
               return (
           (    await member.kick({reason:reason + ' | '+ message.user.tag + ' '+message.user.id})) +

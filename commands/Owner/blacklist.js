@@ -22,7 +22,7 @@ module.exports = {
       const em1 = new EmbedBuilder();
       const nembed = new EmbedBuilder()
       .setColor(`${client.config.embedColor}`)
-      .setDescription(`${client.emoji.wrong} You are not allowed to run this command! Only the Owners are allowed to run this command!`)            
+      .setDescription(`<:11:1052589045374533653> You are not allowed to run this command! Only the Owners are allowed to run this command!`)            
       .setFooter({text:message.author.tag})
   
   if (!client.config.owner.includes(message.author.id)) return message.channel.send({

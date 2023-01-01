@@ -18,7 +18,7 @@ userPerms: ['ViewChannel'],
         if(!text)
         {
             const embed = new EmbedBuilder()
-            .setDescription(`${client.emoji.wrong} Please Enter Some Text`)
+            .setDescription(`<:11:1052589045374533653> Please Enter Some Text`)
             .setColor(client.config.embedColor)
             return message.reply({embeds:[embed]})
         }

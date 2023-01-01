@@ -13,7 +13,7 @@ module.exports = {
     run: async (client, message, args, prefix) => {
       const embed = new EmbedBuilder()
         .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-        .setDescription(`${client.emoji.inventory} Your Inventory is Empty.`)
+        .setDescription(`<:backpack:1056172618379694090> Your Inventory is Empty.`)
       const user = message.mentions.users.first() || message.author; 
        let result = await cs.getUserItems({
     user: user,
@@ -26,27 +26,27 @@ module.exports = {
     
     let e;
     if(em === 'Laptop')
-    e= client.emoji.laptop;
+    e= <:laptop:1055862662380142684>;
     if(em === 'Rolex')
-    e= client.emoji.rolex;
+    e= "<:rolex:1056942672385953933>";
     if(em === 'Bank Note')
-    e= client.emoji.banknote;
+    e= "<:Banknote2:1056943624874639392>";
     if(em === 'Iphone')
-    e= client.emoji.iphone;
+    e= "<:iphone12max:1056942815646580798>";
     if(em === 'Chill Pill')
-    e= client.emoji.chillpill;
+    e= "<:chillpill:1057202298910158879>";
     if(em === 'Garbage')
-    e= client.emoji.garbage;
+    e= "<:garbage:1057202722971070474>";
     if(em === 'Fake Id')
-    e= client.emoji.fakeid;
+    e= "<:fakeid:1057202440811855953>";
     if(em === 'Rifle')
-    e= client.emoji.rifle;
+    e= "<:rifle:1057202795196973079>";
     if(em === 'Junk')
-    e= client.emoji.junk;
+    e= "<:junk:1057202655551832105>";
     if(em === 'Landmine')
-    e= client.emoji.landmine;
-    arr.push({ name: `**${e} ${key.name}:**`, value: `Amount: ${client.emoji.coin}${key.amount}` });
-    embed.setDescription(`${client.emoji.inventory} Your Inventory!`);
+    e= "<:landmine:1057202882887299172>";
+    arr.push({ name: `**${e} ${key.name}:**`, value: `Amount: <a:bitcoin:1055862360713220237>${key.amount}` });
+    embed.setDescription(`<:backpack:1056172618379694090> Your Inventory!`);
   }
   embed.addFields(arr);
   return message.reply({

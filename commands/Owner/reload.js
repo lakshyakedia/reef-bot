@@ -34,12 +34,12 @@ module.exports = {
   if (reload) {
     const op = new EmbedBuilder()
     .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-    .setDescription(`${client.emoji.right} Reloaded \`${args[0]}\``)
+    .setDescription(`<:10:1052589041717092412> Reloaded \`${args[0]}\``)
     return message.channel.send({embeds: [op]})
   }
   const notop = new EmbedBuilder()
   .setColor("#ff0000")
-  .setDescription(`${client.emoji.wrong} Could not reload: \`${args[0]}\``)
+  .setDescription(`<:11:1052589045374533653> Could not reload: \`${args[0]}\``)
   return message.channel.send({embeds: [notop]});
     }
 }

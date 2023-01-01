@@ -17,7 +17,7 @@ description: "Gives My All command info",
 /**
  * {
         label: ' AntiNuke',
-        emoji: `${client.emoji.antinuke}`,
+        emoji: `<:45:1052589154208325793>`,
         value: 'antinuke',
       
       },
@@ -31,64 +31,64 @@ description: "Gives My All command info",
       
       {
         label: ' Home',
-        emoji: `${client.emoji.home}`,
+        emoji: `<:46:1052589156787814481>`,
         value: 'home',
       
       },
       
       {
         label: ' Moderation',
-        emoji: `${client.emoji.mod}`,
+        emoji: `<:40:1052589138819436624>`,
         value: 'mod',
      
       },
       {
         label: ' Automod',
-        emoji: `${client.emoji.automod}`,
+        emoji: `<:4_:1052589026294632448>`,
         value: 'automod',
        
       },
       {
         label: ' Utility',
-        emoji: `${client.emoji.utility}`,
+        emoji: `<:3_:1052589023794823249>`,
         value: 'utility',
        
       },
          {
         label: ' Settings',
-        emoji: `${client.emoji.settings}`,
+        emoji: `<:10:1052589041717092412>`,
         value: 'settings',
        
       },
         
       {
         label: ' Information',
-        emoji: `${client.emoji.info}`,
+        emoji: `<:27:1052589100458315776>`,
         value: 'info',
        
       },
       
       {
         label: 'Welcomer',
-        emoji: `${client.emoji.welcome}`,
+        emoji: `<a:welcome:1054639371657162812>`,
         value: 'welcome',
        
       },
          {
         label: ' Voice Moderation',
-        emoji: `${client.emoji.voice}`,
+        emoji: `<:50:1056096392860422236>`,
         value: 'vmod',
        
       },
          {
         label: ' Custom Roles',
-        emoji: `${client.emoji.customrole}`,
+        emoji: `<:52:1056096390079598673>`,
         value: 'customroles',
        
       },
          {
         label: ' Economy',
-        emoji: `${client.emoji.coin}`,
+        emoji: `<a:bitcoin:1055862360713220237>`,
         value: 'economy',
        
       },
@@ -98,22 +98,22 @@ description: "Gives My All command info",
         .setAuthor({name:`${client.user.username}'s Help Menu`, iconURL: client.user.displayAvatarURL()})
         .setDescription(`
         Hey, i am <@${client.user.id}> i have many awesome features listed below.
-        ${client.emoji.home} **Help Menu:**
+        <:46:1052589156787814481> **Help Menu:**
          My prefix here is: ${prefix}
          Use select menu for commands.
          For further help [click here](${client.config.links.dc}).      
-         ${client.emoji.modules} **Categories:**
-         ${client.emoji.dot} Moderation
-         ${client.emoji.dot} Automod
-         ${client.emoji.dot} Utility         
-         ${client.emoji.dot} Settings
-         ${client.emoji.dot} Information
-         ${client.emoji.dot} Welcomer
-         ${client.emoji.dot} Voice Moderation
-         ${client.emoji.dot} Custom Roles
-         ${client.emoji.dot} Economy
+         <:module:1054660233710022728> **Categories:**
+         <a:dot:1052593815900409956> Moderation
+         <a:dot:1052593815900409956> Automod
+         <a:dot:1052593815900409956> Utility         
+         <a:dot:1052593815900409956> Settings
+         <a:dot:1052593815900409956> Information
+         <a:dot:1052593815900409956> Welcomer
+         <a:dot:1052593815900409956> Voice Moderation
+         <a:dot:1052593815900409956> Custom Roles
+         <a:dot:1052593815900409956> Economy
 
-         ${client.emoji.link} **Links**
+         <:27:1052589100458315776> **Links**
          [Invite ${client.user.username}](https://discord.com/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=applications.commands%20bot) | [Support HQ](${client.config.links.dc})
         `)
         

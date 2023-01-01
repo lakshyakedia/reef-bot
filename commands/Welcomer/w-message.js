@@ -13,7 +13,7 @@ module.exports = {
      
     
     let nocha = new EmbedBuilder()
-.setDescription(`${client.emoji.wrong} Argument must be \`reset\` or the new welcomer embed's description.`)
+.setDescription(`<:11:1052589045374533653> Argument must be \`reset\` or the new welcomer embed's description.`)
 .setFooter({text: `Tip: Type  ${prefix}welcome-message reset`})
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 
@@ -27,7 +27,7 @@ let data = await db.findOne({'guild': message.guild.id})
 if(!data) {
   const em = new EmbedBuilder()
   .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-  .setDescription(`${client.emoji.wrong} First Setup Welcomer using ${prefix}w-setup.`)
+  .setDescription(`<:11:1052589045374533653> First Setup Welcomer using ${prefix}w-setup.`)
 return message.reply({embeds: [em]})
 }
 
@@ -42,7 +42,7 @@ message: args.join(' ')
 
 
 const xddn = new EmbedBuilder()
-.setTitle(`${client.emoji.right} Welcomer Embed Description Set:`)
+.setTitle(`<:10:1052589041717092412> Welcomer Embed Description Set:`)
 .setDescription(`${args.join(' ')}`)
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 

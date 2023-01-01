@@ -28,7 +28,7 @@ module.exports = {
         return message.reply({embeds: [new EmbedBuilder()
           .setColor(client.config.embedColor)
         .setTitle(`${guild.name}'s Banner`)
-        .setDescription(`${client.emoji.wrong} No Banner For This Guild`)        
+        .setDescription(`<:11:1052589045374533653> No Banner For This Guild`)        
         .setTimestamp()
       ]})
       }

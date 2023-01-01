@@ -21,7 +21,7 @@ module.exports = {
       guild: { id: null },
     });
     if (!arr.inventory.length)
-      return message.reply({ embeds: [errus.setDescription(`${client.emoji.wrong} You Dont\'t Have Any Banknotes!\n Please Buy Some From Shop.`)] });
+      return message.reply({ embeds: [errus.setDescription(`<:11:1052589045374533653> You Dont\'t Have Any Banknotes!\n Please Buy Some From Shop.`)] });
     for (i in arr.inventory) {
       if (arr.inventory[i].name.toLowerCase().includes("bank note")) {
         i++;
@@ -33,7 +33,7 @@ module.exports = {
         });
         if (removeItem.error) {
           console.log("Bot tried to remove item number " + i);
-          return message.reply({ embeds: [errus.setDescription(`${client.emoji.wrong} Unknown Error Occurred Please Send A Screenshot of this message to Support Server`)] });
+          return message.reply({ embeds: [errus.setDescription(`<:11:1052589045374533653> Unknown Error Occurred Please Send A Screenshot of this message to Support Server`)] });
         }
         const ToincreasedAmount = 5000 + removeItem.rawData.bankSpace;
         const result = await cs.setBankSpace(
@@ -46,11 +46,11 @@ module.exports = {
           const ems = new EmbedBuilder()
             .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 
-            .setDescription(`${client.emoji.right} Successfully Updated The Bank Space
-            ${client.emoji.bank} Current bank Space: ${result.amount}`)
+            .setDescription(`<:10:1052589041717092412> Successfully Updated The Bank Space
+            <:ecobank:1055873821590175784> Current bank Space: ${result.amount}`)
           return message.reply({ embeds: [ems] });
-        } else return message.reply({ embeds: [errus.setDescription(`${client.emoji.wrong} ${result.error}`)] });
-      } else return message.reply({ embeds: [errus.setDescription(`${client.emoji.wrong} You Dont\'t Have Any Banknotes!\n Please Buy Some From Shop.`)] });
+        } else return message.reply({ embeds: [errus.setDescription(`<:11:1052589045374533653> ${result.error}`)] });
+      } else return message.reply({ embeds: [errus.setDescription(`<:11:1052589045374533653> You Dont\'t Have Any Banknotes!\n Please Buy Some From Shop.`)] });
     }
 
 

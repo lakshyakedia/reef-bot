@@ -13,7 +13,7 @@ module.exports = {
     const channelA = message.mentions.channels.first();    
     
     let nocha = new EmbedBuilder()
-.setDescription(`${client.emoji.wrong} That\'s not a text channel.`)
+.setDescription(`<:11:1052589045374533653> That\'s not a text channel.`)
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 
     if(!channelA.isTextBased())
@@ -43,7 +43,7 @@ channel: channelA.id
 
 
 const xddn = new EmbedBuilder ()
-.setDescription(`${client.emoji.right} Welcomer is now enabled in: ` + `<#${channelA.id}>`)
+.setDescription(`<:10:1052589041717092412> Welcomer is now enabled in: ` + `<#${channelA.id}>`)
 .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
 
 message.reply({embeds:[xddn]})
