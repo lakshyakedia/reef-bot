@@ -41,7 +41,7 @@ module.exports = {
 
         You Earned <a:bitcoin:1055862360713220237>${result.amount}.
 
-        You\'re now on ${result.rawData.streak.daily} days daily streak. `)
+        You\'re daily streak is now ${result.rawData.streak.daily} days `)
 
      
 return message.reply({embeds: [daily]})

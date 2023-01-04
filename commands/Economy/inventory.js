@@ -45,7 +45,7 @@ module.exports = {
     e= "<:junk:1057202655551832105>";
     if(em === 'Landmine')
     e= "<:landmine:1057202882887299172>";
-    arr.push({ name: `**${e} ${key.name}:**`, value: `Amount: <a:bitcoin:1055862360713220237>${key.amount}` });
+    arr.push({ name: `**${e} ${key.name}:**`, value: `Amount: <a:bitcoin:1055862360713220237> ${key.amount}` });
     embed.setDescription(`<:backpack:1056172618379694090> Your Inventory!`);
   }
   embed.addFields(arr);

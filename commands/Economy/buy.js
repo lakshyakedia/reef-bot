@@ -69,8 +69,7 @@ module.exports = {
     e= "<:landmine:1057202882887299172>";
    
     return message.reply({
-      embeds: [embed.setDescription(`<:10:1052589041717092412> Successfully Bought ${parseInt(args[1]) || 1}  ${e}${result.inventory.name} 
-      Deducted Amount From Wallet: <a:bitcoin:1055862360713220237>${result.price} `)],
+      embeds: [embed.setDescription(`<:10:1052589041717092412> Successfully Bought ${parseInt(args[1]) || 1}  ${e}${result.inventory.name} for <a:bitcoin:1055862360713220237> ${result.price}`)],
     });
       
       }
