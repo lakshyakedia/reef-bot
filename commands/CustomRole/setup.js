@@ -251,5 +251,3 @@ if(list === 'reset'){
     message.channel.send({embeds: [embed]})
     }
       }}
-
-// Coded By Bothub™

@@ -63,7 +63,7 @@ module.exports = {
           .addFields([
             {
               name: '__About__',
-              value: `**Name**: ${guild.name} \n **ID**: ${guild.id} \n **Owner ${client.emoji.own}:** <@!${guild.ownerId}> (${guild.ownerId})\n**Created at:** <t:${parseInt(createdTimestamp / 1000)}:R>\n**Members: **${guild.memberCount}`
+              value: `**Name**: ${guild.name} \n **ID**: ${guild.id} \n **Owner <:zzown:1058386870469402665>:** <@!${guild.ownerId}> (${guild.ownerId})\n**Created at:** <t:${parseInt(createdTimestamp / 1000)}:R>\n**Members: **${guild.memberCount}`
             },
             {
               name: '__Server Information__',
@@ -71,11 +71,11 @@ module.exports = {
             },
             {
               name: '__Channels__',
-              value: `**Total: ** ${channels.size}\n**Channels: **${client.emoji.textch} ${channels.filter(channel => channel.type === 0).size} | ${client.emoji.stagech} ${channels.filter(channel => channel.type === 2).size} | ${client.emoji.forumch} ${channels.filter(channel => channel.type === 15).size}`
+              value: `**Total: ** ${channels.size}\n**Channels: **<:DGH_text:1058381062335639572> ${channels.filter(channel => channel.type === 0).size} | <:zz_voice:1062746660393992206> ${channels.filter(channel => channel.type === 2).size} | <:forumch:1058382002690211872> ${channels.filter(channel => channel.type === 15).size}`
             },
             {
               name: '__Members__',
-              value: `**Total: ** ${guild.memberCount}\n**Humans: **${client.emoji.human} ${members.filter(member => !member.user.bot).size} | ${client.emoji.bot}  ${members.filter(member => member.user.bot).size} `
+              value: `**Total: ** ${guild.memberCount}\n**Humans: **<:human:1058992781604954152> ${members.filter(member => !member.user.bot).size} | <:bots:1058993082416250910>  ${members.filter(member => member.user.bot).size} `
             },
             {
               name: '__Emoji Info__',
@@ -83,7 +83,7 @@ module.exports = {
             },
             {
               name: '__Boost Status__',
-              value: `${booster[guild.premiumTier]} [${client.emoji.booster} ${guild.premiumSubscriptionCount || '0'} Boosts]`
+              value: `${booster[guild.premiumTier]} [<a:booster:1058377741612892160> ${guild.premiumSubscriptionCount || '0'} Boosts]`
             },
             {
               name: `__Server Roles__ [${roles.length}]`,
