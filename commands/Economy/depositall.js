@@ -12,7 +12,7 @@ module.exports = {
    
     run: async (client, message, args, prefix) => {
        
-        const user = message.mentions.users.first() || message.author;
+        const user = message.author;
          let res = await cs.balance({
         user: user,
         guild:{id: null}

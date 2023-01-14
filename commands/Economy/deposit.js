@@ -17,7 +17,7 @@ module.exports = {
     
         .setDescription(`<:11:1052589045374533653> Enter A Valid Amount`)
   if (!money) return message.reply({embeds:[crs]});
-        const user = message.mentions.users.first() || message.author;
+        const user = message.author;
         let result = await cs.deposite({
             user: user,
             guild:{id: null},

@@ -12,7 +12,7 @@ module.exports = {
    
     run: async (client, message, args, prefix) => {
         
-        const user = message.mentions.users.first() || message.author;
+        const user = message.author;
         let result = await cs.daily({
             user: user,
             guild: {id: null},
