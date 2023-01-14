@@ -1,4 +1,4 @@
-const { EmbedBuilder, PermissionsBitField, ApplicationCommandOptionType } = require("discord.js");
+const { EmbedBuilder, PermissionsBitField, ApplicationCommandOptionType, MessageActionRow, MessageButton } = require("discord.js");
 const CurrencySystem = require("currency-system");
 const cs = new CurrencySystem;
 
@@ -12,29 +12,38 @@ module.exports = {
   run: async (client, message, args, prefix) => {
     const user = message.mentions.users.first();
     let sender = message.author;
-    let senderx = await cs.balance({
-        user: sender,
-        guild:{id: null}
-    });
+let money = args[1];
+if (String(money).includes("-")) return interaction.reply("You can't send negitive money.")
 
-    let userx = await cs.balance({
-        user: user,
-        guild:{id: null}
-    });
-
-let money = senderx.wallet
-let money2 = userx.wallet
-
+let row = new MessageActionRow()
+    .addComponents(
+        new MessageButton()
+            .setLabel("Accept")
+            .setStyle("SUCCESS")
+            .setCustomId("accept"),
+        new MessageButton()
+            .setLabel("Decline")
+            .setStyle("DANGER")
+            .setCustomId("reject")
+    )
+let rowx = new MessageActionRow()
+    .addComponents(
+        new MessageButton()
+            .setLabel("Accept")
+            .setStyle("SUCCESS")
+            .setCustomId("disabledAccept")
+            .setDisabled(),
+        new MessageButton()
+            .setLabel("Decline")
+            .setStyle("DANGER")
+            .setCustomId("disabledReject")
+            .setDisabled()
+    )
 
 let wins = ["win", "lose"]
    let win = wins[Math.floor(Math.random() * wins.length)];
-if (!args[1]) {
-   return message.channel.send("Tell the amount to gamble!")
-} if (args[1] > money) {
-  return message.channel.send(`You don't have that much balance`)
-} if (args[1] > money2) {
-  return message.channel.send(`That user don't have that much balance`)
-} if (isNaN(args[1])) {
+
+    if (isNaN(args[1])) {
     return message.channel.send(`Thats not a valid number`)
      } else try {
       var playingMessage = await message.channel.send(`${user}, ${sender.username} has invited you in **${args[1]}** coins gamble. accept or reject it!`);
@@ -61,22 +70,32 @@ if (!args[1]) {
     if (win === "win") {
      message.channel.send(`You joined ${sender.username}'s gamble!`).then(msg =>{
 setTimeout(async function(){
-  await msg.edit(`${sender} won **${args[1]}** craft coins!`)
+  await msg.edit(`${sender} won **${args[1]}** coins!`)
 },2000)
-senderx.wallet = senderx.wallet + parseInt(args[1])
-userx.wallet = userx.wallet - parseInt(args[1])
- userx.save()
- senderx.save()
+
+let result = cs.transferMoney({
+  user: user,
+  user2: sender,
+  guild: null,
+  amount: money
+});
+if (result.error) return interaction.reply(`${user} don't have enough money in your wallet.`);
+
+
+
 })
    } else if (win === "lose") {
     message.channel.send(`You joined ${sender.username}'s gamble!`).then(msg =>{
 setTimeout(async function(){
   await msg.edit(`${user} won **${args[1]}**   coins!`)
-  userx.wallet = userx.wallet + parseInt(args[1])
-  senderx.wallet = senderx.wallet - parseInt(args[1])
-   userx.save()
-   senderx.save()
 },2000)
+let result = cs.transferMoney({
+  user: sender,
+  user2: user,
+  guild: null,
+  amount: money
+});
+if (result.error) return interaction.reply(`${sender} don't have enough money in your wallet.`);
 })
     }
   }

@@ -6,7 +6,7 @@ module.exports = {
     name: "leaderboard",
     description: "Show Guild's Leaderboard",
   category:'economy',
-    aliases:['glb'],
+    aliases:['lb'],
   cooldown: 5,
 
    
@@ -28,7 +28,7 @@ module.exports = {
     arr.push({
       name: `${pos} • **${client.users.cache.get(e.userID).username}**`,
       value: `<a:wallet:1055761007789748275> Wallet: <a:bitcoin:1055862360713220237>**${e.wallet}** • <:ecobank:1055873821590175784> Bank: <a:bitcoin:1055862360713220237> **${e.bank}**`,
-      inline: true,
+      inline: false,
     });
   });
   msg.addFields(arr);
