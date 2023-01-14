@@ -1,10 +1,10 @@
 {
   "prefix":"!",
   "statuses":[
-    "${client.prefix}help","/help","https://crvt.co/b/"
+    "!help","/help","https://crvt.co/b/"
   ],
   "db": "mongodb+srv://clara:clara@clara-main.9tb9w7m.mongodb.net/?retryWrites=true&w=majority",
-  "logs":"920657546988093501",
+  "logs":"1010562047643222026",
     "embedColor": "#00ffa0",
     "links":{
 "bg": "https://media.discordapp.net/attachments/984799594787524668/990842585239130182/20220627_100911.jpg",
@@ -19,13 +19,13 @@
   "owner": ["884067115110395925" , "889005501701029919","844843800874582048","954367061222633472"],
   "noprefix": ["884067115110395925" , "889005501701029919","844843800874582048","954367061222633472"],
   "Webhooks": {
-    "bot_error": "https://discord.com/api/webhooks/1015278474778382427/PUk9YtPIhjh2rCsdy94WufVZ3rhNejBi_j30ipMKpfOq7AYwhBNvydxmocYi68WGGdzE",
-    "db_error": "https://discord.com/api/webhooks/1015278474778382427/PUk9YtPIhjh2rCsdy94WufVZ3rhNejBi_j30ipMKpfOq7AYwhBNvydxmocYi68WGGdzE",
-    "webhook_error": "https://discord.com/api/webhooks/1015278474778382427/PUk9YtPIhjh2rCsdy94WufVZ3rhNejBi_j30ipMKpfOq7AYwhBNvydxmocYi68WGGdzE",
-    "server_add": "https://discord.com/api/webhooks/1015277965321457694/7F7RvDL6yjvlb_xZP_PUhJmWg6iQNjR9F7ECLZkti1MKRz2wdRx5t8HpTgQCd2N2Tlrf",
-    "server_remove": "https://discord.com/api/webhooks/1015277965321457694/7F7RvDL6yjvlb_xZP_PUhJmWg6iQNjR9F7ECLZkti1MKRz2wdRx5t8HpTgQCd2N2Tlrf",
-    "player_create": "https://discord.com/api/webhooks/1015277965321457694/7F7RvDL6yjvlb_xZP_PUhJmWg6iQNjR9F7ECLZkti1MKRz2wdRx5t8HpTgQCd2N2Tlrf",
-    "player_delete": "https://discord.com/api/webhooks/1015277965321457694/7F7RvDL6yjvlb_xZP_PUhJmWg6iQNjR9F7ECLZkti1MKRz2wdRx5t8HpTgQCd2N2Tlrf"
+    "bot_error": "https://discord.com/api/webhooks/1063434246649282590/Ht9P278Skj4P1ZENQAZb-jykSC2dh622s0FmNIa_aVL4RFZ-dYu2mmHCq_Ed8wqP_Fqj",
+    "db_error": "https://discord.com/api/webhooks/1063434246649282590/Ht9P278Skj4P1ZENQAZb-jykSC2dh622s0FmNIa_aVL4RFZ-dYu2mmHCq_Ed8wqP_Fqj",
+    "webhook_error": "https://discord.com/api/webhooks/1063434246649282590/Ht9P278Skj4P1ZENQAZb-jykSC2dh622s0FmNIa_aVL4RFZ-dYu2mmHCq_Ed8wqP_Fqj",
+    "server_add": "https://discord.com/api/webhooks/1063434441558601848/CbDL7yd4K4Xme49a89GKCYtzbg8BCKbDXgeykWeskqYODaU2BbknR-_1-Ja8bYCklUOO",
+    "server_remove": "https://discord.com/api/webhooks/1063434441558601848/CbDL7yd4K4Xme49a89GKCYtzbg8BCKbDXgeykWeskqYODaU2BbknR-_1-Ja8bYCklUOO",
+    "player_create": "https://discord.com/api/webhooks/1063434441558601848/CbDL7yd4K4Xme49a89GKCYtzbg8BCKbDXgeykWeskqYODaU2BbknR-_1-Ja8bYCklUOO",
+    "player_delete": "https://discord.com/api/webhooks/1063434441558601848/CbDL7yd4K4Xme49a89GKCYtzbg8BCKbDXgeykWeskqYODaU2BbknR-_1-Ja8bYCklUOO"
   },
   "nodes":[
     

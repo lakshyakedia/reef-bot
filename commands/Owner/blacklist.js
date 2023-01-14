@@ -52,7 +52,7 @@ module.exports = {
     await user.save();
 
 
-    return  message.reply(`User has been removed from blacklistt`)
+    return  message.reply(`User has been removed from blacklist`)
 }
 
 }

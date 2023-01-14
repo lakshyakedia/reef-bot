@@ -61,9 +61,7 @@ const currentCPUUsage = (usage.user + usage.system) * 1000;
         `➜ Connections: **${connectedchannelsamount}**\n➜ Platform: \`${os.platform()}\`\n➜ CPU Usage:\`${(process.cpuUsage().system / 1024 / 1024).toFixed(2)}%\`\n➜ RAM Usage: \`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}Mb\`\n➜ Ping: \`${client.ws.ping}ms\`\n➜ Up Since: <t:${duration1}:R> `},
         
         {name:`<:dev:978563383580295188> Developers`,value:`\`\`\`js\n! ARYAN.NFT#0082\nBraylon ඞ#5950\`\`\``},
-        {name:`<:djs:984372533002395720> Discord.JS Version`,value:`\`\`\`js\n${discordJSVersion}\`\`\``},
-        {name:`<:nodejs:984372538236891196> Node.JS Version`,value:`\`\`\`js\n${process.version}\`\`\``},
-        {name:`<:premiumbadge:967414570169802832> Poru  Version`,value:`\`\`\`js\n${client.poru.version}\`\`\``})
+        {name:`<:djs:984372533002395720> Discord.JS Version`,value:`\`\`\`js\n${discordJSVersion}\`\`\``},)
         .setThumbnail(client.user.displayAvatarURL())
         .setFooter({text:`Thank you for your continued support to ${client.user.username}. <3`})
         message.channel.send({embeds: [embed]})
