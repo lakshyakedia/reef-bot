@@ -19,7 +19,7 @@ const client = new Client({
   
   allowedMentions: {
     parse: ["roles", "users", "everyone"],
-    repliedUser: true,
+    repliedUser: false,
   },
 
   intents: [

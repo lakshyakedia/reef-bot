@@ -1,4 +1,4 @@
-const { EmbedBuilder, PermissionsBitField, ApplicationCommandOptionType, MessageActionRow, MessageButton } = require("discord.js");
+const { EmbedBuilder, PermissionsBitField, ApplicationCommandOptionType, ActionRowBuilder, ButtonBuilder } = require("discord.js");
 const CurrencySystem = require("currency-system");
 const cs = new CurrencySystem;
   const min = 1;
@@ -16,7 +16,16 @@ module.exports = {
   run: async (client, message, args, prefix) => {
     const user = message.mentions.users.first();
     let sender = message.author;
-let money = args[1];
+    let money = args[1];
+
+    
+    if (!args[0]) return message.channel.send(`Enter an user to bet`)
+    if (!args[1]) return message.channel.send(`Enter an amount to bet`)
+    if (isNaN(args[1])) {
+    return message.channel.send(`Thats not a valid number`)
+    }
+    if (args[1] < 1) return message.channel.send(`You can't gamble less than 1 coin!`)
+
 let sendermoney = await cs.balance({
   user: sender,
   guild:{id: null}
@@ -27,81 +36,61 @@ let usermoney = await cs.balance({
   guild:{id: null}
 });
 
-
 if (!user) return message.channel.send(`You need to mention someone to gamble with!`)
-if (!args[1]) return message.channel.send(`Enter an amount to bet`)
-if (isNaN(args[1])) {
-return message.channel.send(`Thats not a valid number`)
-}
-if (args[1] < 1) return message.channel.send(`You can't gamble less than 1 coin!`)
 if (args[1] > sendermoney.wallet) return message.channel.send(`You don't have enough coins to gamble!`)
 if (args[1] > usermoney.wallet) return message.channel.send(`The user you are trying to gamble with doesn't have enough coins!`)
 if (user.id == sender.id) return message.channel.send(`You can't gamble with yourself!`)
 if (user.bot) return message.channel.send(`You can't gamble with a bot!`)
 
 if (user && args[1] && !isNaN(args[1]) && args[1] > 0 && args[1] <= sendermoney.wallet && args[1] <= usermoney.wallet && user.id != sender.id && !user.bot) {
-  
-let row = new MessageActionRow()
+let amount = money;  
+let row = new ActionRowBuilder()
     .addComponents(
-        new MessageButton()
+        new ButtonBuilder()
             .setLabel("Accept")
-            .setStyle("SUCCESS")
+            .setStyle("Success")
             .setCustomId("accept"),
-        new MessageButton()
+        new ButtonBuilder()
             .setLabel("Decline")
-            .setStyle("DANGER")
+            .setStyle("Danger")
             .setCustomId("reject")
     )
-let rowx = new MessageActionRow()
+let rowx = new ActionRowBuilder()
     .addComponents(
-        new MessageButton()
+        new ButtonBuilder()
             .setLabel("Accept")
-            .setStyle("SUCCESS")
+            .setStyle("Success")
             .setCustomId("disabledAccept")
             .setDisabled(),
-        new MessageButton()
+        new ButtonBuilder()
             .setLabel("Decline")
-            .setStyle("DANGER")
+            .setStyle("Danger")
             .setCustomId("disabledReject")
-            .setDisabled()
+            .setDisabled(true)
     )
 
-      let msg = await message.channel.send({ content: `${user}, ${sender.username} includes invited you in **${args[1]}** coins gamble.`, components: [row] })
+      let msg = await message.channel.send({ content: `${user.username}, ${sender.username} invited you in ${args[1]} coins gamble.`, components: [row] })
 
     const filter = async (inter) => {
-      if (user.id == inter.user.id || sender.id == inter.user.id) return true
+      if (user.id == inter.user.id) return true
       else {
           
-          await inter.reply({ content: `<@${inter.user.id}> Only **Gamble Participants** can interact with buttons!`, ephemeral: true })
+          await inter.reply({ content: `${inter.user.tag}, Only **${user.tag}** can interact with buttons!`, ephemeral: true })
           return false
       }
   }
   const collector = await msg.createMessageComponentCollector({
       filter, time: 30000
   })
-  let a = false, b = false
+  let b = false
   collector.on('collect', async i => {
       await i.deferUpdate()
       if (i.customId === 'accept') {
-          if (!a && !b) {
-              if (i.user.id == sender.id) {
-                  a = true
-                  return message.channel.send(`You joined your **own**'s gamble, waiting for opponent to join !`)
-              } else if (i.user.id == user.id) {
+          if (!b) {
+              if (i.user.id == user.id) {
                   b = true
-                  return message.channel.send(`You joined **${sender.tag}**'s gamble, waiting for opponent to join !`)
+                  collector.stop()
               }
-          } else if (a && !b) {
-              if (i.user.id == sender.id) return i.followUp({ content: `You have already joined your own gamble, waiting for opponent to join !`, ephemeral: true })
-              collector.stop()
-              message.channel.send(`You joined **${sender.tag}**'s gamble !`)
-              check()
-              return
-
-            } else if (!a && b) {
-              if (i.user.id == user.id) return i.followUp({ content: `You have already joined **${sender.tag}**'s gamble, waiting for opponent to join !`, ephemeral: true })
-              collector.stop()
-              message.channel.send(`You joined your **own**'s gamble !`)
               check()
               return
             } }

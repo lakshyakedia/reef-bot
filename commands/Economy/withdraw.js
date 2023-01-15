@@ -43,7 +43,7 @@ module.exports = {
     if (result.type === "low-money"){   
         const lm = new EmbedBuilder()
         .setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-        .setDescription(`<:11:1052589045374533653> You Don\'t Have that much money in Your Wallet.`)
+        .setDescription(`<:11:1052589045374533653> You Don\'t Have that much money in Your Bank.`)
       return message.reply({embeds: [lm]})
                                     }
     if (result.type === "no-money"){   
