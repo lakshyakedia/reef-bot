@@ -22,7 +22,7 @@ module.exports = {
         //.setColor("YELLOW")
         .setThumbnail(user.displayAvatarURL())
       .addFields([{ name: 'Wallet', value:`⌬ ${result.wallet}`},
-{ name: 'Bank', value: `⌬ ${result.bank} / ${result.space} (${per.replace(/NaN/g, "0")}%)`},
+{ name: 'Bank', value: `⌬ ${result.bank} / ${result.space} (${per}%)`},
                   { name: 'Net Worth', value: `⌬ ${net}
 `},
   ]);

@@ -11,30 +11,19 @@ module.exports = {
    
     run: async (client, message, args, prefix) => {
 
-        const user = message.mentions.users.first() || message.author;
+      const user = message.mentions.users.first() || client.cache.users.get(args[0]);
+      if (!user) return message.reply({ content: `Please mention a user or provide a valid user id`})
      const result = await User.findOne({ userId: user.id }) || new User({ userId: user.id })
      let amount = parseInt(args[1]);
-     //let result = await User.findOne({userId: user.id}) || new User({ userId: user.id }).save()
-   // embed = new MessageEmbed({ color: "#2F3136" })
+      if (isNaN(amount)) return message.reply({ content: `Please provide a valid number`})
+      
 if (!client.config.owner.includes(message.author.id))  return message.reply("You can't use it!")
 
-            
-
-        
-     
         result.space +=amount
         result.save()
-        
 
-        
          return message.reply("done")
 
-            
-             // const ems = new EmbedBuilder()
-        //.setColor(message.guild.members.me.displayHexColor !== '#000000' ? message.guild.members.me.displayHexColor : client.config.embedColor)
-      //  .setTitle(`${user.tag}'s Bank Information`)
-     //   .setDescription(`done`)
-       // return //message.reply({embeds: [ems]});
         }
      
 }
