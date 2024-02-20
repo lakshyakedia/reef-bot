@@ -5,57 +5,21 @@
   ],
   "db": "MONGO",
   "logs":"1010562047643222026",
-    "embedColor": "#2F3136",
-    "links":{
-"bg": "https://media.discordapp.net/attachments/984799594787524668/990842585239130182/20220627_100911.jpg",
-"notplaying":"https://i.pinimg.com/originals/81/34/08/81340844a99a35cc7993166cbd9b5866.gif",
-"playing":"https://media.discordapp.net/attachments/968090055493165056/1024873435882586232/giphy.gif?width=696&height=310",
-"dc":"https://discord.gg/REEFBOT"
-    },
+  "embedColor": "#2F3136",
+  "links":{
+   "bg": "",
+   "dc":"https://discord.gg/reefbot"
+  },
    
-
-
- 
-  "owner": ["884067115110395925" , "857169227172282378","687993171749503062","954367061222633472"],
-  "noprefix": ["884067115110395925" , "857169227172282378","687993171749503062","954367061222633472"],
+  "owner": [""],
+  "noprefix": [""],
   "Webhooks": {
     "bot_error": "WEBHOOK",
     "db_error": "WEBHOOK",
     "webhook_error": "WEBHOOK",
     "server_add": "WEBHOOK",
-    "server_remove": "WEBHOOK",
-    "player_create": "WEBHOOK",
-    "player_delete": "WEBHOOK"
+    "server_remove": "WEBHOOK"
   },
-  "nodes":[
-    
-  {
-      "name":"Asia",
-      "host":"lava1.horizxon.studio",
-      "port":80,
-      "password":"horizxon.studio",
-      
-      "secure":false
-  },
-  {
-      "name":"US",
-      "host":"lava2.horizxon.studio",
-      "port":80,
-      "password":"horizxon.studio",
-      
-      "secure":false
-  },
-  {
-      "name":"EUROPE",
-      "host":"lava3.horizxon.studio",
-      "port":80,
-      "password":"horizxon.studio",
-      
-      "secure":false
-  }
-  
-  
- 
-  ]
+
 }
   
