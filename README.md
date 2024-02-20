@@ -15,7 +15,8 @@ Comes with a server wise premium system, top.gg vote tracking, top.gg vote only 
 
 ## ⚙️ Installation
 
-To make your own instance, just fill the parts in config.json, index.js. And it should be good to go! Stuck in the installation? contact me on discord: @drix10
+To make your own instance, just fill the parts in config.json, index.js, and shards.js as the startup file. Stuck in the installation? contact me on discord: [@drix10](https://discord.com/users/954367061222633472)
+
 ## 🛠️ Usage
 
 Once ReefBot is added to your server, you can start using its features right away! Use the `!help` command to see a list of available commands and get started with customizing the bot to fit your server's needs.
