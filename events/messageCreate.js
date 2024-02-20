@@ -18,12 +18,12 @@ const premrow = new ActionRowBuilder()
 .addComponents(new ButtonBuilder()
 .setLabel("Premium")
 .setStyle("Link")
-.setURL("https://discord.gg/wrCzESkVzK"),
+.setURL("https://discord.gg/reefbot"),
 new ButtonBuilder()
 .setLabel("Vote")
 .setStyle("Link")
 .setEmoji("<:vote:985926662552178748>")
-.setURL("https://top.gg/"));
+.setURL(`https://top.gg/${client.user.id}`));
    
 
    
