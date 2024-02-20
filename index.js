@@ -39,8 +39,7 @@ const client = new Client({
 });
 const { Database } = require("quickmongo");
 
-client.login('ODg1MTM1Mjc0MTk4MzI3Mjk2.GJO3Oc.d2Qc7idtuILGNQ6sIrEsFXDnq59xRkZbMS2hVk').catch(e => console.log(e));
-//ODg1MTM1Mjc0MTk4MzI3Mjk2.GJO3Oc.d2Qc7idtuILGNQ6sIrEsFXDnq59xRkZbMS2hVk
+client.login('TOKEN').catch(e => console.log(e));
 const CurrencySystem = require("currency-system");
 
 client.config = require("./config.json");
@@ -83,7 +82,7 @@ cs.setMaxWalletAmount(10000);
 // Search for new npm package updates on bot startup! Latest version will be displayed in console.
 cs.searchForNewUpdate(true);
 const Topgg = require("@top-gg/sdk");
-client.topgg = new Topgg.Api("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkwMjg0MjY3NjAyNDYwNjc0MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjY5Mzg0MzA5fQ.ATEr19kaKpLH5gjFmaQnngAj9qj9cOT54lWpSNYtW9w");
+client.topgg = new Topgg.Api("API");
 
 client.userSettings = new discord.Collection();
 client.logger = require('./util/logger.js');
@@ -153,14 +152,14 @@ client.on("threadCreate", (thread) => {
   }
 });
 
-/** const { AutoPoster } = require('topgg-autoposter')
+const { AutoPoster } = require('topgg-autoposter')
 const weeb = new WebhookClient({ url:  webhook_error}); 
-const poster = AutoPoster('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkwMjg0MjY3NjAyNDYwNjc0MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjY5Mzg0MzA5fQ.ATEr19kaKpLH5gjFmaQnngAj9qj9cOT54lWpSNYtW9w', client) // your discord.js or eris client
+const poster = AutoPoster('API', client) // your discord.js or eris client
 
 // optional
 poster.on('posted', (stats) => { // ran when succesfully posted
  weeb.send({content:`Posted stats to Top.gg | ${stats.serverCount} servers`})
-})*/
+})
 const date = `${moment().format("DD-MM-YYYY hh:mm:ss")}`;
 const web = new WebhookClient({ url: bot_error });
 
