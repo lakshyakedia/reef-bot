@@ -19,50 +19,15 @@ module.exports.run = async (client, interaction, args) => {
      .addComponents(new ButtonBuilder()
      .setLabel("Premium")
      .setStyle("Link")
-     .setURL("https://discord.gg/wrCzESkVzK"),
+     .setURL("https://discord.gg/reefbot"),
      new ButtonBuilder()
      .setLabel("Vote")
      .setStyle("Link")
      .setEmoji("985926662552178748")
-     .setURL("https://top.gg/"));
+     .setURL(`https://top.gg/${client.user.id}`));
         
      music.setColor(interaction.guild.members.me.displayHexColor !== '#000000' ? interaction.guild.members.me.displayHexColor : client.config.embedColor)
 
-if(interaction.isButton()) {
- 
-           if(interaction.customId === 'announcement')
-           {
-    
-              const channel = client.channels.cache.get('920657525270003772'); 
-               try{
-    let lm = channel.lastinteraction.content;
-    
-    music.setDescription(lm);
-    interaction.reply({embeds:[music], ephemeral: true})
-                  }catch(error) {
-    music.setDescription(`No Annoncement has been made`)
-    interaction.reply({embeds:[music], ephemeral: true})
-    }
-           }
-     if(interaction.customId === 'patch')
-           {
-     const channel = client.channels.cache.get('1014451395648299098'); 
-              try{
-    let lm = channel.lastinteraction.content;
-    
-    
-    music.setDescription(lm)
-    interaction.reply({embeds:[music], ephemeral: true})
-                  }catch(error){
-  music.setDescription(`No Patches has been released`)
-    interaction.reply({embeds:[music], ephemeral: true})
-    }
-         }
-   
-  
-
-
-    }
     if(interaction.isSelectMenu())
     {
       let options = interaction.values;
