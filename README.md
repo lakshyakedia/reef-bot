@@ -1,6 +1,6 @@
-# 🌊 ReefBot [Star 🌟 & Follow before usage]
+# 🌊 ReeF Bot [Star 🌟 & Follow before usage]
 
-Welcome to ReefBot - the ultimate Discord bot for all your server needs! ReefBot is an advanced Discord bot written in JavaScript, packed with features including welcome messages, economy systems, moderation tools, and utility commands. Whether you're managing a community, gaming server, or just want to enhance your Discord experience, ReefBot has got you covered.
+Welcome to ReeF Bot - the ultimate Discord bot for all your server needs! ReeF Bot is an advanced Discord bot written in JavaScript, packed with features including welcome messages, economy systems, moderation tools, and utility commands. Whether you're managing a community, gaming server, or just want to enhance your Discord experience, ReeF Bot has got you covered.
 
 ## 🚀 Features
 
@@ -8,10 +8,11 @@ Welcome to ReefBot - the ultimate Discord bot for all your server needs! ReefBot
 - **Economy System**: Start your own virtual economy with credits, daily rewards, and gambling features.
 - **Moderation Tools**: Keep your server safe and organized with moderation commands like kick, ban, mute, and more.
 - **Utility Commands**: Get instant access to useful information and tools like weather forecasts, member info, and server stats.
+- **Inbuilt Systems**: Comes with a server wise premium system, top.gg vote tracking, top.gg vote only commands system, sharding system. 
 
 ## ⚙️ Installation
 
-To make your own instance, just fill the parts in config.json, index.js. And it should be good to go!
+To make your own instance, just fill the parts in config.json, index.js. And it should be good to go! Stuck in the installation? contact me on discord: @drix10
 ## 🛠️ Usage
 
 Once ReefBot is added to your server, you can start using its features right away! Use the `!help` command to see a list of available commands and get started with customizing the bot to fit your server's needs.
@@ -26,7 +27,7 @@ We welcome contributions from the community to make ReefBot even better! If you 
 
 ## ❤️ Show Your Support
 
-If you find ReefBot helpful and enjoy using it, consider starring this repository and following me. Your support helps us continue to improve and maintain the bot for everyone.
+If you find ReeF Bot helpful and enjoy using it, consider starring this repository and following me. You can also donate me through [Kofi](https://ko-fi.com/reefbot)
 
 ## 📝 License
 
