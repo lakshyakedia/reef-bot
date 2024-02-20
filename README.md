@@ -15,12 +15,16 @@ Comes with a server wise premium system, top.gg vote tracking, top.gg vote only 
 
 ## ⚙️ Installation
 
-To make your own instance, just fill the parts in config.json, index.js, and shards.js as the startup file. Stuck in the installation? contact me on discord: [@drix10](https://discord.com/users/954367061222633472)
+1. Clone this repository (`git clone https://github.com/Drix10/reef-bot.git`)
+2. Insert your bot details in `TOKEN `, `API` parts of **index.js** & fill out **config.js**
+3. Run `npm install && node .` in your console or use **shards.js** as your startup file
+4. Run `npm audit fix --force && npm rebuild` if any package related errors, use Nodejs 18 or higher
+
+Stuck in the installation? contact me on discord: [@drix10](https://discord.com/users/954367061222633472)
 
 ## 🛠️ Usage
 
-Once ReefBot is added to your server, you can start using its features right away! Use the `!help` command to see a list of available commands and get started with customizing the bot to fit your server's needs.
-
+Once your bot is online and added to your server, you can start using its features right away! Use the `!help` command to see a list of available commands in your bot
 ## 💬 Support
 
 If you have any questions, feedback, or need assistance with ReefBot, feel free to join our Discord server at [discord.gg/reefbot](https://discord.gg/reefbot). Our friendly community and dedicated support team are always here to help!
