@@ -4,11 +4,14 @@ Welcome to ReeF Bot - the ultimate Discord bot for all your server needs! ReeF B
 
 ## 🚀 Features
 
-- **Welcome Messages**: Greet new members with customizable welcome messages and images to make them feel at home.
-- **Economy System**: Start your own virtual economy with credits, daily rewards, and gambling features.
-- **Moderation Tools**: Keep your server safe and organized with moderation commands like kick, ban, mute, and more.
-- **Utility Commands**: Get instant access to useful information and tools like weather forecasts, member info, and server stats.
-- **Inbuilt Systems**: Comes with a server wise premium system, top.gg vote tracking, top.gg vote only commands system, sharding system. 
+- **Welcome Messages**
+- **Economy System**
+- **Moderation Tools**
+- **Utility Commands**
+
+## 🌟 Extra Benefits 
+
+Comes with a server wise premium system, top.gg vote tracking, top.gg vote only commands system, sharding system and super good UI and customizable emojis all in one file.
 
 ## ⚙️ Installation
 
