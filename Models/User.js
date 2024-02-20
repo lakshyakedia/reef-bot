@@ -21,7 +21,6 @@ const User = mongoose.Schema({
         diamondcrate: { type: Number, default: 0 },
         deluxecrate: { type: Number, default: 0 }
     },
-    songplayed: { type: Number, default: 0 },
     badge: {
         dev: { type: Boolean, default: false },
         mod:{ type: Boolean, default: false },
