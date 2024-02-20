@@ -1,6 +1,4 @@
-# 🌊 ReefBot
-
-![ReefBot Logo](https://cdn.discordapp.com/attachments/1048490074175721493/1208492827563008100/reef-1.gif)
+# 🌊 ReefBot [Star 🌟 & Follow before usage]
 
 Welcome to ReefBot - the ultimate Discord bot for all your server needs! ReefBot is an advanced Discord bot written in JavaScript, packed with features including welcome messages, economy systems, moderation tools, and utility commands. Whether you're managing a community, gaming server, or just want to enhance your Discord experience, ReefBot has got you covered.
 
@@ -28,7 +26,7 @@ We welcome contributions from the community to make ReefBot even better! If you 
 
 ## ❤️ Show Your Support
 
-If you find ReefBot helpful and enjoy using it, consider starring this repository and following its owner. Your support helps us continue to improve and maintain the bot for everyone.
+If you find ReefBot helpful and enjoy using it, consider starring this repository and following me. Your support helps us continue to improve and maintain the bot for everyone.
 
 ## 📝 License
 
