@@ -5,7 +5,7 @@ const Guild = require("../Models/Guild")
 const ms = require('ms');
 
 const Topgg = require("@top-gg/sdk");
-const topgg = new Topgg.Api("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkwMjg0MjY3NjAyNDYwNjc0MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjY5Mzg0MzA5fQ.ATEr19kaKpLH5gjFmaQnngAj9qj9cOT54lWpSNYtW9w");
+const topgg = new Topgg.Api("API");
 
 const { msg } = require(`${process.cwd()}/util/onCoolDown.js`);
 
@@ -38,7 +38,7 @@ new ButtonBuilder()
 
 //server premium scopes ^^
   let scot = 0;
-  let sLink = "https://discord.gg/wrCzESkVzK";
+  let sLink = "https://discord.gg/reefbot";
   if(upremend && Date.now() >= upremend) 
   {
     let upremcount = await client.db.get(`upremcount_${message.author.id}`) ? await client.db.get(`upremcount_${message.author.id}`) : 0;
@@ -209,39 +209,6 @@ var m = "";
     };
       //perms finish
     
-    if (command.inVc && !memberChannel) {
-      const join = new EmbedBuilder()
-      .setColor(`#ff0000`)
-        .setDescription(`<:11:1052589045374533653> You must be in a voice channel to use this command!`)
-      return message.channel.send({embeds: [join]})
-    }
-  
-  if (command.sameVc && player && botChannel !== memberChannel) {
-const same = new EmbedBuilder()
-      .setColor(`#ff0000`)
-        .setDescription(`<:11:1052589045374533653> You must be in the same voice channel as me to use this command!`) 
-    return message.channel.send({embeds: [same]})
-
-
-  }
-  
-  if (command.player && !player) {
-    const exist = new EmbedBuilder()
-      .setColor(`#ff0000`)
-        .setDescription(`<:11:1052589045374533653> There is nothing playing in this server!`) 
-
-
-return message.channel.send({embeds: [exist]})
-    }
-    if (command.current && !player.currentTrack){
-
-const exist = new EmbedBuilder()
-      .setColor(`#ff0000`)
-        .setDescription(`<:11:1052589045374533653> There is nothing playing in this server!`) 
-
-
-message.channel.send({embeds: [exist]})
-                     }
   
   if (command.args && !args.length) {
     const provide = new EmbedBuilder()
