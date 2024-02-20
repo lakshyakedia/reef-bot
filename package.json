@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Drix10/ReeF-Rewrite.git"
+    "url": "git+https://github.com/Drix10/reef-bot.git"
   },
   "keywords": [
     "Music",
     "bestbot"
   ],
-  "author": "ARYANOP-Radio",
+  "author": "drix10-aryan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Drix10/ReeF-Rewrite/issues"
+    "url": "https://github.com/Drix10/reef-bot/issues"
   },
-  "homepage": "https://github.com/Drix10/ReeF-Rewrite#readme",
+  "homepage": "https://github.com/Drix10/reef-bot#readme",
   "dependencies": {
     "@top-gg/sdk": "^3.1.3",
     "ascii-table": "0.0.9",
