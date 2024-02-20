@@ -71,24 +71,7 @@ if(interaction.isButton()) {
           const embed = new EmbedBuilder()
           .setAuthor({name: client.user.username, iconURL: client.user.displayAvatarURL()})
           .setColor(interaction.guild.members.me.displayHexColor !== '#000000' ? interaction.guild.members.me.displayHexColor : client.config.embedColor)
-          if (funny === 'antinuke') {
-            _commands = client.commands.filter((x) => x.category && x.category === "antinuke").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` <:45:1052589154208325793> **Antinuke \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
-            interaction.update({
-              embeds: [embed],
-              ephemeral: true
-            }).catch((_) => { })
-            return
-          }
-          if (funny === 'automod') {
-            _commands = client.commands.filter((x) => x.category && x.category === "automod").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` <:4_:1052589026294632448> **Automod \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
-            interaction.update({
-              embeds: [embed],
-              ephemeral: true
-            }).catch((_) => { })
-            return
-          }
+
           if (funny === 'mod') {
             _commands = client.commands.filter((x) => x.category && x.category === "mod").map((x) => `\`${x.name}\``);
             embed.addFields({name: ` <:40:1052589138819436624> **Moderation \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
@@ -134,24 +117,7 @@ if(interaction.isButton()) {
             }).catch((_) => { })
             return
           }
-         if (funny === 'vmod') {
-            _commands = client.commands.filter((x) => x.category && x.category === "vmod").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` <:50:1056096392860422236> **Voice Moderation \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
-            interaction.update({
-              embeds: [embed],
-              ephemeral: true
-            }).catch((_) => { })
-            return
-          }
-        if (funny === 'customroles') {
-            _commands = client.commands.filter((x) => x.category && x.category === "customroles").map((x) => `\`${x.name}\``);
-            embed.addFields({name: ` <:52:1056096390079598673> **Custom Roles \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
-            interaction.update({
-              embeds: [embed],
-              ephemeral: true
-            }).catch((_) => { })
-            return
-          }
+       
         if (funny === 'economy') {
             _commands = client.commands.filter((x) => x.category && x.category === "economy").map((x) => `\`${x.name}\``);
             embed.addFields({name: ` <a:bitcoin:1055862360713220237> **Economy \`[${_commands.length}]\`**`,value: _commands.sort().join(", ")})
@@ -169,9 +135,7 @@ if(interaction.isButton()) {
              Use select menu for commands.
              For further help [click here](${client.config.links.dc}).      
              <:module:1054660233710022728> **Modules**
-             <a:dot:1052593815900409956> Antinuke
              <a:dot:1052593815900409956> Moderation
-             <a:dot:1052593815900409956> Automod
              <a:dot:1052593815900409956> Utility
              <a:dot:1052593815900409956> Welcomer
              <a:dot:1052593815900409956> Settings
