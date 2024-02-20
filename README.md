@@ -16,7 +16,7 @@ Comes with a server wise premium system, top.gg vote tracking, top.gg vote only 
 ## ⚙️ Installation
 
 1. Clone this repository (`git clone https://github.com/Drix10/reef-bot.git`)
-2. Insert your bot details in `TOKEN `, `API` parts of **index.js** & fill out **config.js**
+2. Insert your details in `TOKEN `, `API` parts of **index.js**, **events/messageCreate.js** & fill **config.js**
 3. Run `npm install && node .` in your console or use **shards.js** as your startup file
 4. Run `npm audit fix --force && npm rebuild` if any package related errors, use Nodejs 18 or higher
 
