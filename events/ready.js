@@ -20,7 +20,7 @@ await client.db.connect();
  
     setInterval(() => {
       const statuses = [
-        `${client.prefix}help`,`/help`,`https://crvt.co/b/`
+        `discord.gg/reefbot`,`discord.gg/reefbot`,`discord.gg/reefbot`
       ];
       const status = client.config.statuses[Math.floor(Math.random() * statuses.length)];
       client.user.setActivity(status, { type: ActivityType.Listening });
